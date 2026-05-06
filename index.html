@@ -36,20 +36,20 @@
     .login-box {
       background: var(--surface);
       border: 1px solid rgba(255,208,76,0.22);
-      border-radius: clamp(12px, 2vw, 20px);
-      padding: clamp(1.75rem, 4vw, 3rem) clamp(1.5rem, 4vw, 2.75rem);
+      border-radius: 16px;
+      padding: clamp(1.75rem, 5vw, 3rem) clamp(1.5rem, 5vw, 2.75rem);
       width: 100%;
-      max-width: clamp(300px, 90vw, 400px);
+      max-width: 380px;
       text-align: center;
     }
 
     .login-logo {
-      height: clamp(22px, 4vw, 34px);
+      height: clamp(24px, 4vw, 34px);
       margin-bottom: clamp(1.25rem, 3vw, 2rem);
     }
 
     .login-title {
-      font-size: clamp(0.65rem, 1.2vw, 0.75rem);
+      font-size: clamp(0.65rem, 1.5vw, 0.75rem);
       font-weight: 600;
       letter-spacing: 0.1em;
       text-transform: uppercase;
@@ -65,7 +65,7 @@
       color: var(--text);
       font-family: 'DM Sans', sans-serif;
       font-size: clamp(0.875rem, 2vw, 1rem);
-      padding: clamp(0.6rem, 1.5vw, 0.85rem) 1rem;
+      padding: clamp(0.65rem, 2vw, 0.85rem) 1rem;
       outline: none;
       transition: border-color 0.15s;
       text-align: center;
@@ -73,7 +73,6 @@
       margin-bottom: clamp(0.75rem, 2vw, 1rem);
       display: block;
     }
-
     .login-field input:focus { border-color: var(--yellow-border); }
     .login-field input::placeholder { color: var(--text-faint); letter-spacing: 0.05em; }
 
@@ -84,10 +83,10 @@
       border: none;
       border-radius: 8px;
       font-family: 'DM Sans', sans-serif;
-      font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+      font-size: clamp(0.8rem, 2vw, 0.9rem);
       font-weight: 700;
       letter-spacing: 0.08em;
-      padding: clamp(0.6rem, 1.5vw, 0.85rem) 1rem;
+      padding: clamp(0.65rem, 2vw, 0.85rem) 1rem;
       cursor: pointer;
       transition: opacity 0.15s, transform 0.1s;
       text-transform: uppercase;
@@ -110,37 +109,31 @@
     .topbar {
       background: #111214;
       border-bottom: 1px solid rgba(255,208,76,0.15);
-      padding: 0 clamp(1rem, 4vw, 2.5rem);
-      height: clamp(52px, 8vh, 68px);
+      padding: 0 clamp(1rem, 3vw, 2.5rem);
+      height: clamp(52px, 7vh, 68px);
       display: flex; align-items: center; justify-content: space-between;
       position: sticky; top: 0; z-index: 100;
     }
 
     .topbar-left { display: flex; align-items: center; gap: clamp(10px, 2vw, 20px); }
-
-    .logo-img { height: clamp(22px, 3.5vw, 32px); display: block; }
-
-    .divbar { width: 1px; height: clamp(20px, 3vh, 28px); background: rgba(255,255,255,0.1); }
+    .logo-img    { height: clamp(22px, 3vw, 32px); display: block; }
+    .divbar      { width: 1px; height: clamp(20px, 3vh, 28px); background: rgba(255,255,255,0.1); }
 
     .hub-label {
-      font-size: clamp(0.6rem, 1.1vw, 0.75rem);
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--text-muted);
+      font-size: clamp(0.6rem, 1vw, 0.75rem);
+      font-weight: 500; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--text-muted);
     }
 
     .topbar-right {
-      display: flex; align-items: center; gap: clamp(8px, 2vw, 16px);
-      font-size: clamp(0.65rem, 1.1vw, 0.75rem);
-      font-family: monospace;
-      color: var(--text-faint);
+      display: flex; align-items: center; gap: clamp(8px, 1.5vw, 16px);
+      font-size: clamp(0.65rem, 1vw, 0.75rem);
+      font-family: monospace; color: var(--text-faint);
     }
 
     .status-dot {
-      display: inline-flex; align-items: center; gap: 6px;
-      font-size: clamp(0.6rem, 1vw, 0.7rem);
-      color: var(--green);
+      display: inline-flex; align-items: center; gap: 5px;
+      font-size: clamp(0.6rem, 1vw, 0.7rem); color: var(--green);
     }
     .status-dot::before {
       content: ''; width: 6px; height: 6px;
@@ -148,16 +141,13 @@
       animation: pulse 2s infinite;
     }
 
-    #clock { display: none; }
-    @media (min-width: 480px) { #clock { display: inline; } }
-
     .logout-btn {
       background: transparent;
       border: 1px solid var(--border);
       border-radius: 6px;
       color: var(--text-muted);
       font-family: 'DM Sans', sans-serif;
-      font-size: clamp(0.65rem, 1vw, 0.72rem);
+      font-size: clamp(0.6rem, 1vw, 0.72rem);
       padding: 4px clamp(6px, 1.5vw, 10px);
       cursor: pointer;
       transition: border-color 0.15s, color 0.15s;
@@ -167,52 +157,44 @@
 
     @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
 
-    /* MAIN */
+    /* MAIN — ocupa toda a largura com padding lateral */
     .main {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: clamp(1.25rem, 4vw, 2.5rem) clamp(1rem, 4vw, 2rem) clamp(2rem, 5vw, 3rem);
+      width: 100%;
+      padding: clamp(1.25rem, 3vw, 2.5rem) clamp(1rem, 4vw, 3rem) clamp(2rem, 4vw, 3rem);
     }
 
     /* SECTIONS */
-    .section { margin-bottom: clamp(1.75rem, 4vw, 2.5rem); animation: fadeUp 0.4s ease both; }
+    .section { margin-bottom: clamp(1.75rem, 3vw, 2.5rem); animation: fadeUp 0.4s ease both; }
     .section:nth-child(1) { animation-delay: 0.04s; }
-    .section:nth-child(2) { animation-delay: 0.1s; }
+    .section:nth-child(2) { animation-delay: 0.1s;  }
     .section:nth-child(3) { animation-delay: 0.16s; }
 
     .sec-hdr {
       display: flex; align-items: center; gap: 10px;
       margin-bottom: clamp(0.75rem, 2vw, 1rem);
-      padding-bottom: clamp(0.5rem, 1.5vw, 0.75rem);
+      padding-bottom: clamp(0.5rem, 1vw, 0.75rem);
       border-bottom: 1px solid var(--border);
     }
 
-    .pip { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+    .pip       { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+    .sec-label { font-size: clamp(0.6rem, 1vw, 0.6875rem); font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); }
+    .sec-count { margin-left: auto; font-size: clamp(0.6rem, 1vw, 0.6875rem); font-family: monospace; color: var(--text-faint); }
 
-    .sec-label {
-      font-size: clamp(0.6rem, 1.1vw, 0.6875rem);
-      font-weight: 600; letter-spacing: 0.1em;
-      text-transform: uppercase; color: var(--text-muted);
-    }
-
-    .sec-count {
-      margin-left: auto;
-      font-size: clamp(0.6rem, 1.1vw, 0.6875rem);
-      font-family: monospace; color: var(--text-faint);
-    }
-
-    /* CARDS */
+    /* CARDS — 3 colunas em desktop, 2 em tablet, 1 em mobile */
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(clamp(200px, 30vw, 280px), 1fr));
-      gap: clamp(8px, 2vw, 12px);
+      grid-template-columns: repeat(3, 1fr);
+      gap: clamp(8px, 1.5vw, 14px);
     }
+
+    @media (max-width: 900px)  { .cards { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 520px)  { .cards { grid-template-columns: 1fr; } }
 
     .card {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: clamp(10px, 1.5vw, 14px);
-      padding: clamp(1rem, 2.5vw, 1.375rem) clamp(1rem, 2.5vw, 1.375rem);
+      padding: clamp(1rem, 2vw, 1.5rem);
       text-decoration: none; display: block;
       position: relative; overflow: hidden;
       transition: border-color 0.15s, transform 0.15s, background 0.15s;
@@ -220,38 +202,20 @@
     .card::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; opacity: 0; transition: opacity 0.2s; }
     .card:hover  { border-color: var(--border-hover); background: var(--surface2); transform: translateY(-2px); }
     .card:hover::after { opacity: 1; }
-    .card:hover .arr { opacity: 1; transform: translate(3px,-3px); }
+    .card:hover .arr   { opacity: 1; transform: translate(3px,-3px); }
 
-    .ct { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: clamp(0.625rem, 2vw, 0.875rem); }
-
-    .cico {
-      width: clamp(30px, 4vw, 38px);
-      height: clamp(30px, 4vw, 38px);
-      border-radius: 9px;
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-    }
-
-    .arr { font-size: clamp(0.875rem, 1.5vw, 1rem); color: var(--text-faint); opacity: 0; transition: opacity 0.15s, transform 0.15s; }
-
-    .cn {
-      font-size: clamp(0.85rem, 1.8vw, 0.9375rem);
-      font-weight: 600; color: var(--text);
-      margin-bottom: 4px; letter-spacing: -0.01em;
-    }
-
-    .cd {
-      font-size: clamp(0.72rem, 1.4vw, 0.8rem);
-      color: var(--text-muted); line-height: 1.5;
-    }
+    .ct   { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: clamp(0.75rem, 1.5vw, 1rem); }
+    .cico { width: clamp(30px, 3vw, 38px); height: clamp(30px, 3vw, 38px); border-radius: 9px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .arr  { font-size: clamp(0.875rem, 1.2vw, 1rem); color: var(--text-faint); opacity: 0; transition: opacity 0.15s, transform 0.15s; }
+    .cn   { font-size: clamp(0.85rem, 1.4vw, 1rem); font-weight: 600; color: var(--text); margin-bottom: 5px; letter-spacing: -0.01em; }
+    .cd   { font-size: clamp(0.72rem, 1.1vw, 0.82rem); color: var(--text-muted); line-height: 1.5; }
 
     .tag {
       display: inline-flex; align-items: center; gap: 5px;
-      font-size: clamp(0.6rem, 1.1vw, 0.6875rem);
+      font-size: clamp(0.6rem, 0.9vw, 0.6875rem);
       font-family: monospace;
-      padding: 3px clamp(7px, 1.5vw, 10px);
-      border-radius: 20px;
-      margin-top: clamp(0.625rem, 2vw, 0.875rem);
+      padding: 3px clamp(7px, 1.2vw, 10px);
+      border-radius: 20px; margin-top: clamp(0.625rem, 1.5vw, 1rem);
       font-weight: 500; border: 1px solid transparent; letter-spacing: 0.04em;
     }
     .tag::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: currentColor; opacity: 0.65; }
@@ -259,38 +223,39 @@
     /* Area colors */
     .at .pip { background: var(--yellow); } .at .card::after { background: var(--yellow); } .at .cico { background: var(--yellow-dim); color: var(--yellow); } .at .tag { background: var(--yellow-dim); color: var(--yellow); border-color: var(--yellow-border); }
     .np .pip { background: var(--purple); } .np .card::after { background: var(--purple); } .np .cico { background: var(--purple-dim); color: var(--purple); } .np .tag { background: var(--purple-dim); color: var(--purple); border-color: var(--purple-border); }
-    .pe .pip { background: var(--green);  } .pe .card::after { background: var(--green);  } .pe .cico { background: var(--green-dim);  color: var(--green);  } .pe .tag { background: var(--green-dim);  color: var(--green);  border-color: var(--green-border);  }
+    .pe .pip { background: var(--green);  } .pe .card::after { background: var(--green);  } .pe .cico { background: var(--green-dim);  color: var(--green);  } .pe .tag { background: var(--green-dim);  color: var(--green);  border-color: var(--green-border); }
 
     .ghost {
-      background: transparent; border: 1px dashed rgba(255,255,255,0.07);
+      background: transparent;
+      border: 1px dashed rgba(255,255,255,0.07);
       border-radius: clamp(10px, 1.5vw, 14px);
-      padding: clamp(1rem, 2.5vw, 1.375rem);
+      padding: clamp(1rem, 2vw, 1.5rem);
       display: flex; align-items: center; justify-content: center;
-      font-size: clamp(0.72rem, 1.4vw, 0.78rem);
+      font-size: clamp(0.7rem, 1.1vw, 0.78rem);
       color: var(--text-faint); font-family: monospace;
-      min-height: clamp(90px, 14vw, 120px);
+      min-height: clamp(80px, 10vw, 130px);
     }
 
-    /* FOOTER */
     .footer {
-      margin-top: clamp(1.5rem, 4vw, 2.5rem);
-      padding-top: clamp(1rem, 2.5vw, 1.5rem);
+      margin-top: clamp(1.5rem, 3vw, 2.5rem);
+      padding-top: clamp(1rem, 2vw, 1.5rem);
       border-top: 1px solid var(--border);
       display: flex; align-items: center; justify-content: space-between;
-      font-size: clamp(0.65rem, 1.1vw, 0.72rem);
+      font-size: clamp(0.62rem, 1vw, 0.72rem);
       color: var(--text-faint); font-family: monospace;
       flex-wrap: wrap; gap: 4px;
     }
 
     .fy { color: var(--yellow); margin: 0 5px; }
-    svg.ico { display: block; width: clamp(14px, 2.5vw, 18px); height: clamp(14px, 2.5vw, 18px); }
+    svg.ico { display: block; width: clamp(14px, 2vw, 18px); height: clamp(14px, 2vw, 18px); }
 
     @keyframes fadeUp { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
 
-    /* MOBILE tweaks */
+    /* Mobile */
     @media (max-width: 480px) {
       .hub-label { display: none; }
       .divbar    { display: none; }
+      #clock     { display: none; }
     }
   </style>
 </head>
@@ -326,9 +291,12 @@
 
   <div class="main">
 
+    <!-- ASSISTÊNCIA TÉCNICA -->
     <div class="section at">
       <div class="sec-hdr">
-        <span class="pip"></span><span class="sec-label">Assistência Técnica</span><span class="sec-count">2 projetos</span>
+        <span class="pip"></span>
+        <span class="sec-label">Assistência Técnica</span>
+        <span class="sec-count">2 projetos</span>
       </div>
       <div class="cards">
         <a class="card" href="https://dashboard-neosolar.vercel.app/" target="_blank" rel="noopener">
@@ -349,12 +317,16 @@
           <p class="cd">Relatório de performance técnica</p>
           <span class="tag">Report</span>
         </a>
+        <div class="ghost">+ em breve</div>
       </div>
     </div>
 
+    <!-- ENGENHARIA DE PRODUTOS -->
     <div class="section np">
       <div class="sec-hdr">
-        <span class="pip"></span><span class="sec-label">Engenharia de Produtos</span><span class="sec-count">1 projeto</span>
+        <span class="pip"></span>
+        <span class="sec-label">Engenharia de Produtos</span>
+        <span class="sec-count">1 projeto</span>
       </div>
       <div class="cards">
         <a class="card" href="https://neosolar-dev-dashboard.vercel.app/" target="_blank" rel="noopener">
@@ -367,14 +339,19 @@
           <span class="tag">Dashboard</span>
         </a>
         <div class="ghost">+ em breve</div>
+        <div class="ghost">+ em breve</div>
       </div>
     </div>
 
+    <!-- PROJETOS ESPECIAIS -->
     <div class="section pe">
       <div class="sec-hdr">
-        <span class="pip"></span><span class="sec-label">Projetos Especiais</span><span class="sec-count">em breve</span>
+        <span class="pip"></span>
+        <span class="sec-label">Projetos Especiais</span>
+        <span class="sec-count">em breve</span>
       </div>
       <div class="cards">
+        <div class="ghost">+ em breve</div>
         <div class="ghost">+ em breve</div>
         <div class="ghost">+ em breve</div>
       </div>
