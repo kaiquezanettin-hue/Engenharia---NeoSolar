@@ -1,0 +1,26 @@
+[
+  {
+    "id": "p1",
+    "area": "at",
+    "name": "Dashboard Tickets Abertos",
+    "desc": "Status por tempo dos tickets abertos",
+    "url": "https://dashboard-neosolar.vercel.app/",
+    "type": "Dashboard"
+  },
+  {
+    "id": "p2",
+    "area": "at",
+    "name": "Report Assist. Técnica",
+    "desc": "Relatório de performance técnica",
+    "url": "https://ast-report-neosolar.vercel.app/",
+    "type": "Report"
+  },
+  {
+    "id": "p3",
+    "area": "np",
+    "name": "Dashboard Fases 2 e 3",
+    "desc": "Acompanhamento das fases 2 e 3",
+    "url": "https://neosolar-dev-dashboard.vercel.app/",
+    "type": "Dashboard"
+  }
+]
