@@ -16,6 +16,14 @@
     "type": "Report"
   },
   {
+    "id": "p5",
+    "area": "at",
+    "name": "Dashboard SAC",
+    "desc": "Acompanhamento de chamados SAC",
+    "url": "https://project-fj1lt.vercel.app/",
+    "type": "Dashboard"
+  },
+  {
     "id": "p3",
     "area": "np",
     "name": "Dashboard Fases 2 e 3",
