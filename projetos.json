@@ -22,5 +22,13 @@
     "desc": "Acompanhamento das fases 2 e 3",
     "url": "https://neosolar-dev-dashboard.vercel.app/",
     "type": "Dashboard"
+  },
+  {
+    "id": "p4",
+    "area": "np",
+    "name": "Mini BESS — Dimensionamento MPPT",
+    "desc": "Dimensionamento de inversor híbrido LuxPower",
+    "url": "https://dimensionamento-inversor-h-brido.vercel.app/",
+    "type": "Dashboard"
   }
 ]
