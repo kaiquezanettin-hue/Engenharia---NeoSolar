@@ -38,5 +38,13 @@
     "desc": "Dimensionamento de inversor híbrido LuxPower",
     "url": "https://dimensionamento-inversor-h-brido.vercel.app/",
     "type": "Dashboard"
+  },
+  {
+    "id": "p6",
+    "area": "pe",
+    "name": "Fretes - Projetos Especiais",
+    "desc": "Calculadora de Pallets e veículos",
+    "url": "https://neosolar-logistica.vercel.app/",
+    "type": "Outro"
   }
 ]
