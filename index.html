@@ -451,8 +451,8 @@
       if (!res.ok) throw new Error('HTTP ' + res.status);
       projectsCache = await res.json();
     } catch(e) {
-      document.getElementById('main-content').innerHTML = `<div class="error-banner">⚠️ Não foi possível carregar <code>projetos.json</code>. Verifique se o arquivo está na raiz do repositório.</div>`;
-      return;
+      console.warn('projetos.json não encontrado:', e);
+      projectsCache = [];
     }
     renderHub();
   }
@@ -460,6 +460,9 @@
   function renderHub() {
     const main = document.getElementById('main-content');
     let html = '';
+    if (projectsCache.length === 0) {
+      html += '<div class="error-banner">⚠️ Arquivo <code>projetos.json</code> não encontrado. Verifique se está na raiz do repositório GitHub.</div>';
+    }
     Object.entries(AREAS).forEach(([areaKey, area]) => {
       const aProjects = projectsCache.filter(p => p.area === areaKey);
       const count = aProjects.length;
