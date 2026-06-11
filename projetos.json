@@ -40,6 +40,14 @@
     "type": "Dashboard"
   },
   {
+    "id": "p7",
+    "area": "np",
+    "name": "Fretes Internacionais - Painéis Solares",
+    "desc": "Ferramenta para cálculo de fretes de painéis solares em containers",
+    "url": "https://neosolar-container.vercel.app/",
+    "type": "Outro"
+  },
+  {
     "id": "p6",
     "area": "pe",
     "name": "Fretes - Projetos Especiais",
