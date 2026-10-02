@@ -48,6 +48,14 @@
     "type": "Outro"
   },
   {
+    "id": "p8",
+    "area": "np",
+    "name": "DimSol",
+    "desc": "Ferramenta para dimensionamento de equipamentos",
+    "url": "https://dimsolgit.vercel.app/",
+    "type": "Outro"
+  },
+  {
     "id": "p6",
     "area": "pe",
     "name": "Fretes - Projetos Especiais",
